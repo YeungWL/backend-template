@@ -1,0 +1,48 @@
+/* Prefix */
+$prefix: je;
+
+/* Color */
+$color-c0                   :#000;
+$color-c1                   :#111;
+$color-c2                   :#222;
+$color-c3                   :#333;
+$color-c4                   :#444;
+$color-c5                   :#555;
+$color-c6                   :#666;
+$color-c7                   :#777;
+$color-c8                   :#888;
+$color-c9                   :#999;
+$color-ca                   :#aaa;
+$color-cb                   :#bbb;
+$color-cc                   :#ccc;
+$color-cd                   :#ddd;
+$color-ce                   :#eee;
+
+$color-default              :#ffffff; 
+$color-primary              :#409eff; 
+$color-success              :#67c23a; 
+$color-info                 :#2db7f5; 
+$color-warning              :#ff9900; 
+$color-error                :#ed4014; 
+$color-dark                 :#909399; 
+$color-white                :#ffffff; 
+
+$general : (
+c0:$color-c0,c1:$color-c1,c2:$color-c2,c3:$color-c3,c4:$color-c4,
+c5:$color-c5,c6:$color-c6,c7:$color-c7,c8:$color-c8,c9:$color-c9,
+ca:$color-ca,cb:$color-cb,cc:$color-cc,cd:$color-cd,ce:$color-ce
+);
+
+$special : (
+default:$color-default,primary:$color-primary,success:$color-success,
+info:$color-info,warning:$color-warning,error:$color-error,dark:$color-dark,white:$color-white
+);
+
+$borderLight : (default:$color-white,primary:#BCDDFF,success:#C9E9BA,
+info:#B5E5FB,warning:#FFDBA5,error:#F8BCAC,dark:#D8D9DB);
+
+// $bgLight : (default:#ffffff,primary:#ecf5ff,success:#edfff3,
+// info:#f0faff,warning:#fff9e6,error:#ffefe6,dark:#f4f4f5);
+
+$bgLight : (default:$color-white,primary:opacify(rgba($color-primary,0.12),0),success:opacify(rgba($color-success,0.10),0),
+info:opacify(rgba($color-info,0.10),0),warning:opacify(rgba($color-warning,0.10),0),error:opacify(rgba($color-error,0.10),0),dark:opacify(rgba($color-dark,0.14),0));

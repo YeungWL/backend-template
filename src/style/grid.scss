@@ -1,0 +1,66 @@
+
+$medias : (default:'',xs:576px,sm:768px,md:992px,lg:1200px,xl:1920px);
+
+$vals : (0:0,1:4.16667%,2:8.33333%,3:12.5%,4:16.66667%,5:20.83333%,6:25%,7:29.16667%,8:33.33333%,9:37.5%,
+10:41.66667%,11:45.83333%,12:50%,13:54.16667%,14:58.33333%,15:62.5%,16:66.66667%,17:70.83333%,18:75%,19:79.16667%,
+20:83.33333%,21:87.5%,22:91.66667%,23:95.83333%,24:100%);
+
+/* Grid layout */
+[class*=je-col-] {float: left;box-sizing: border-box;position:relative;}
+.je-row {position:relative;box-sizing:border-box;height: auto;zoom:1;}
+.je-row:after {clear:both}
+
+@each $key,$value in $medias{
+  
+    @if $value == '' {
+      @each $k,$val in $vals{
+        @if $k == 0 {
+        .je-col-#{$k} {display:none;width:$val;}
+        }@else{
+        .je-col-#{$k} {width:$val;}
+        }
+        .je-col-offset-#{$k} {margin-left:$val;}
+        .je-col-pull-#{$k} {right:$val;}
+        .je-col-push-#{$k} {left:$val;}
+      }
+    }@else{
+      @media only screen and (min-width:$value) {
+        @each $k,$val in $vals{
+          @if $k == 0 {
+          .je-col-#{$key}-#{$k} {display:none;width:$val;}
+          }@else{
+          .je-col-#{$key}-#{$k} {width:$val;}
+          }
+          .je-col-#{$key}-offset-#{$k} {margin-left:$val;}
+          .je-col-#{$key}-pull-#{$k} {right:$val;}
+          .je-col-#{$key}-push-#{$k} {left:$val;}
+        }
+      }
+    }
+  
+}
+
+/* percentage 百分比 */
+.je-w100{width:100%;}
+.je-w95{width:95%;}
+.je-w90{width:90%;}
+.je-w85{width:85%;}
+.je-w80{width:80%;}
+.je-w75{width:75%;}
+.je-w70{width:70%;}
+.je-w67{width:67%;}
+.je-w65{width:65%;}
+.je-w60{width:60%;}
+.je-w55{width:55%;}
+.je-w50{width:50%;}
+.je-w45{width:45%;}
+.je-w40{width:40%;}
+.je-w35{width:35%;}
+.je-w33{width:33%;}
+.je-w30{width:30%;}
+.je-w25{width:25%;}
+.je-w20{width:20%;}
+.je-w15{width:15%;}
+.je-w10{width:10%;}
+.je-w5 {width: 5%;}
+.je-w0 {width:  0;}

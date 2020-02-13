@@ -1,0 +1,16 @@
+$marpad : (0:0px,2:2px,5:5px,8:8px,10:10px,15:15px,18:18px,20:20px,25:25px,30:30px);
+
+/* margin padding*/ 
+@each $key,$value in $marpad{
+  .je-m#{$key}{margin:$value;}
+  .je-ml#{$key}{margin-left:$value;}
+  .je-mr#{$key}{margin-right:$value;}
+  .je-mt#{$key}{margin-top:$value;}
+  .je-mb#{$key}{margin-bottom:$value;}
+
+  .je-p#{$key}{padding:$value;}
+  .je-pl#{$key}{padding-left:$value;}
+  .je-pr#{$key}{padding-right:$value;}
+  .je-pt#{$key}{padding-top:$value;}
+  .je-pb#{$key}{padding-bottom:$value;}
+}

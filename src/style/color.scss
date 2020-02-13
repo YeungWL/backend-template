@@ -1,0 +1,55 @@
+@import './global.scss';
+
+
+/* Colors Style*/
+
+@each $key,$value in $general{
+  .je-#{$key} {color: $value;}
+}
+
+@each $key,$value in $special{
+  .je-#{$key} {color: $value;}
+}
+
+/* Border Style 边框颜色*/
+@each $key,$value in $general{
+  .je-border-#{$key} {border-color: $value;}
+}
+@each $key,$value in $special{
+  .je-border-#{$key} {border-color: $value;}
+}
+@each $key,$value in $borderLight{
+  .je-border-#{$key}.light {border-color: $value;}
+}
+
+
+/* Backgrounds Style*/
+@each $key,$value in $general{
+  .je-bg-#{$key} {background-color: $value;}
+}
+@each $key,$value in $special{
+  .je-bg-#{$key} {background-color: $value;}
+}
+@each $key,$value in $bgLight{
+  .je-bg-#{$key}.light {background-color: $value;}
+}
+
+
+@each $key,$value in $special{
+  @if $key == default {
+    .je-btn.je-bg-default:hover{border-color:#c6e2ff;background-color:#ecf5ff;color:$color-primary;}
+    .je-btn.je-bg-default.light:hover{border-color:$color-primary;background-color:$color-white;color:$color-primary;}
+  } @else {
+    .je-btn.je-bg-#{$key}.light:hover{border-color:$value;background-color:$value;color:$color-white;opacity:1;filter:alpha(opacity=100);}
+  }
+}
+@each $key,$value in $bgLight{
+  @if $key == default {
+    .je-btn.je-bg-default[disabled]:hover{border-color:#ddd;background-color:#fbfbfb;color:#666;opacity:.7;filter:alpha(opacity=70);cursor:not-allowed;}
+    .je-btn.je-bg-default.light[disabled]:hover{border-color:#ddd;background-color:#fbfbfb;color:#666;opacity:.7;filter:alpha(opacity=70);}
+  } @else {
+    .je-btn.je-bg-#{$key}[disabled]{opacity:.7;filter:alpha(opacity=70);cursor:not-allowed;}
+    .je-btn.je-bg-#{$key}.light[disabled]:hover {background-color: $value;color:map-get($special,$key);border-color:map-get($borderLight,$key);opacity:.7;filter:alpha(opacity=70);}
+  }
+}
+.je-c3[disabled]{opacity:.7;filter:alpha(opacity=70);}
