@@ -1,14 +1,15 @@
 /*
  * @Date: 2020-02-12 11:34:48
- * @LastEditors  : Yeung
- * @LastEditTime : 2020-02-12 21:45:05
+ * @LastEditors: Yeung
+ * @LastEditTime: 2020-03-18 18:16:53
  * @Description: 用户管理模块路由文件
  */
 export default {
   path: '/user',
   name: 'user',
   menu: true,
-  component: () => import('@/layouts/default.vue'),
+  // component: () => import('@/layouts/default.vue'),
+  component: () => import('@/layouts/withBreadcrumb.vue'),
   meta: { title: "用户管理", keepAlive: true, isAuth: true },
   children: [
     {
