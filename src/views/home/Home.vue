@@ -1,6 +1,8 @@
 <template>
   <el-content bespread>
-    <div class="je-pl10 je-pr10 je-f16" slot="header">{{$route.meta.title}}</div>
+    <el-breadcrumb separator="/" slot="site">
+      <el-breadcrumb-item>{{$route.meta.title}}</el-breadcrumb-item>
+    </el-breadcrumb>
     <div style="padding-top:100px;text-align: center;font-size:30px;">欢迎使用管理系统</div>
   </el-content>
 </template>

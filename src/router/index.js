@@ -84,7 +84,7 @@ let defaultRouter = [{
 let newRouterList = defaultRouter.concat(routeMapList)
 
 const router = new VueRouter({
-  mode: 'history', // 访问路径不带井号
+  mode: 'hash', // 访问路径不带井号
   routes: newRouterList,
   linkActiveClass: 'active',
   linkExactActiveClass: 'active',

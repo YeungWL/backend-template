@@ -5,7 +5,7 @@
 export default {
   path: '/error',
   name: 'error',
-  menu: true,
+  menu: false,
   component: {
     template: '<router-view></router-view>'
   },
@@ -17,8 +17,8 @@ export default {
   redirect: "/error/404",
   children: [{
     path: "404",
-    menu: true,
-    component: () => import( /* webpackChunkName: "error404" */ '@views/exception/404.vue'),
+    menu: false,
+    component: () => import( /* webpackChunkName: "error404" */ '@views/error/404.vue'),
     meta: {
       title: "出错啦！",
       keepAlive: false,

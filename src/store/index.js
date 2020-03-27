@@ -24,6 +24,9 @@ export default new Vuex.Store({
   state: {
     menuList: []
   },
+  getters: {
+    menuList: state => state.menuList
+  },
   mutations: {
     menuList(state, options) {
       state.menuList = options

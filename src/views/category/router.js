@@ -1,6 +1,6 @@
 export default {
   path: '/category',
-  component: () => import('@/layouts/default.vue'),
+  component: () => import('@/layouts/withBreadcrumb.vue'),
   menu: true,
   meta: { title: '分类管理' },
   children: [

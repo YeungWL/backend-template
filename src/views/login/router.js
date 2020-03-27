@@ -5,7 +5,7 @@ export default {
     {
       path: '',
       name: 'login',
-      component: () => import('@views/login/Login.vue'),
+      component: () => import('@views/login/Login2.vue'),
       meta: {
         title: '登录',
         keepAlive: false,
