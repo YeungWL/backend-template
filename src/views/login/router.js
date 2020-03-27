@@ -1,5 +1,6 @@
 export default {
   path: '/login',
+  menu: false,
   component: () => import('@/layouts/null.vue'),
   children: [
     {

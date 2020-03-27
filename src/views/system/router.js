@@ -1,7 +1,7 @@
 export default {
   path: '/system',
-  component: () => import('@/layouts/default.vue'),
-  menu: true,
+  component: () => import('@/layouts/null.vue'),
+  menu: false,
   meta: {
     title: '系统管理',
     keepAlive: true,
