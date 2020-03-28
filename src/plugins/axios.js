@@ -42,6 +42,7 @@ instance.interceptors.response.use(
         // 自动刷新token
         store.commit('user/token', response.headers['jwt-token'])
       }
+      // 这个要根据自己的项目来配置
       if (response.data.data && response.data.data.list) {
         // 如果返回数据是分页列表
         // 分页信息再包装，添加 finished 判断

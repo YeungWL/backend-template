@@ -1,14 +1,8 @@
-/**
- * 路由配置
- */
-
 export default {
   path: '/error',
   name: 'error',
   menu: false,
-  component: {
-    template: '<router-view></router-view>'
-  },
+  component: () => import('@/layouts/withBreadcrumb.vue'),
   meta: {
     title: "系统管理",
     keepAlive: false,
